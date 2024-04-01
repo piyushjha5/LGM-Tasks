@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form</title>
+    <link rel="stylesheet" type="text/css" href="regcss.css">
+</head>
+<body>
+    <div class="heading">  
+        <h2>Registration Form</h2>
+    </div>
+    <div class="container">
+        <div class="form-container">
+            <form id="registrationForm" onsubmit="event.preventDefault();">
+                <label for="name">Name:</label>
+                <input type="text" id="name" required><br><br>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" required><br><br>
+
+                <label for="website">Website:</label>
+                <input type="text" id="website" required><br><br>
+
+                <label for="imageLink">Image Link:</label>
+                <input type="text" id="imageLink" required><br><br>
+
+                <label>Gender:</label>
+                <label for="male" id="malelabel">Male</label>
+                <input type="radio" id="male" name="gender" value="male">
+                <br>
+                <label for="female" id="femalelabel">Female</label>
+                <input type="radio" id="female" name="gender" value="female"><br><br>
+                
+                <label>Skills:</label>
+                <input type="checkbox" id="sk1" name="skills" value="Java">
+                <label for="sk1" id="lbs1">Java</label>
+                <input type="checkbox" id="sk2" name="skills" value="HTML">
+                <label for="sk2" id="lbs2">HTML</label>
+                <input type="checkbox" name="skills" id="sk3" value="Python">
+                <label for="sk3" id="lbs3">Python</label>
+                  <br><br><br>
+                <button type="submit" onclick="displayFormData()" id="btn1">Enroll</button>
+                <button type="button" onclick="clearForm()" id="btn2">Clear</button>
+            </form>
+        </div>
+        <div class="empty">
+            .
+        </div>
+        <div class="display-container">
+            <h3>Submitted Data:</h3>
+            <p id="displayData"></p>
+        </div>
+    </div>
+
+    <script src="regjs.js"></script>
+</body>
+</html>
